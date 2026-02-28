@@ -26,19 +26,15 @@ This project trains and evaluates multiple classification models for hand gestur
    - The best performing model (SVM) was registered in the MLflow Model Registry for future deployment and management.
 
 ## How to Run
-1. Install dependencies:
+1. Start the MLflow tracking server:
    ```bash
-   pip install -r requirements.txt
+   mlflow server --port 5000
    ```
-2. Start the MLflow tracking server:
-   ```bash
-   mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlruns --host localhost --port 5000
-   ```
-3. Run the training script:
+2. Run the training script:
    ```bash
    python model_training.py
    ```
-4. View results and artifacts in the MLflow UI:
+3. View results and artifacts in the MLflow UI:
    - Open [http://localhost:5000](http://localhost:5000) in your browser.
 
 ## Notes
@@ -46,5 +42,5 @@ This project trains and evaluates multiple classification models for hand gestur
 - Model artifacts and visualizations are versioned by run ID.
 - The SVM model was registered in the MLflow Model Registry as the best model.
 
----
-For questions or improvements, feel free to reach out!
+## models 
+- Didn't upload it because of the large size
